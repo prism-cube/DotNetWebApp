@@ -1,23 +1,26 @@
 ﻿<Properties StartupConfiguration="{34780712-84A8-41D0-A47D-EC6DAB0168BA}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.DotNetWebApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="DotNetWebApp/Controllers/TodoController.cs">
     <Files>
-      <File FileName="DotNetWebApp/Controllers/HomeController.cs" Line="31" Column="2" />
-      <File FileName="DotNetWebApp/Controllers/TodoController.cs" Line="24" Column="1" />
+      <File FileName="DotNetWebApp/Controllers/TodoController.cs" Line="28" Column="23" />
+      <File FileName="DotNetWebApp/Views/Todo/Index.cshtml" Line="1" Column="43" />
+      <File FileName="DotNetWebApp/Views/Shared/Error.cshtml" Line="1" Column="12" />
+      <File FileName="DotNetWebApp/ViewModels/Todo/IndexViewModel.cs" Line="3" Column="28" />
+      <File FileName="DotNetWebApp/Requests/Todo/IndexRequest.cs" Line="8" Column="38" />
+      <File FileName="DotNetWebApp/Program.cs" Line="27" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DotNetWebApp" expanded="True">
             <Node name="DotNetWebApp" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="TodoController.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Requests" expanded="True">
+                <Node name="Todo" expanded="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True">
+                <Node name="Todo" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
                 <Node name="Shared" expanded="True" />
@@ -32,4 +35,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>

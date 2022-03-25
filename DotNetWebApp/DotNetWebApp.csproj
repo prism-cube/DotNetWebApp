@@ -8,8 +8,25 @@
 
   <ItemGroup>
     <None Remove="Views\Todo\" />
+    <None Remove="ViewModels\Todo\" />
+    <None Remove="request\" />
+    <None Remove="Requests\Todo\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Utils\" />
+    <None Remove="Utils\Helpers\" />
+    <None Remove="Utils\Helpers\EmptyTextFile.txt" />
+    <None Remove="Utils\Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Todo\" />
+    <Folder Include="ViewModels\Todo\" />
+    <Folder Include="Requests\" />
+    <Folder Include="Requests\Todo\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Utils\Helpers\" />
+    <Folder Include="Utils\Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 </Project>

@@ -1,9 +1,19 @@
-﻿@{
-    ViewData["Title"] = "ToDo Page";
+﻿@model DotNetWebApp.ViewModels.Todo.IndexViewModel
+@{
+    ViewData["Title"] = "Todo Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Todo</h1>
+
+    <div class="container well">
+        <form asp-controller="Todo" asp-action="Index" method="post">
+            <div class="form-group">
+                <input asp-for="Name" type="text" class="form-control input-lg">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-success btn-block btn-lg">追加</button>
+        </form>
+    </div>
 </div>
 
