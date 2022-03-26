@@ -16,6 +16,10 @@
     <None Remove="Utils\Helpers\" />
     <None Remove="Utils\Helpers\EmptyTextFile.txt" />
     <None Remove="Utils\Filters\" />
+    <None Remove="Models\" />
+    <None Remove="Entities\" />
+    <None Remove="Utils\Extensions\" />
+    <None Remove="Utils\Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Todo\" />
@@ -25,6 +29,10 @@
     <Folder Include="Utils\" />
     <Folder Include="Utils\Helpers\" />
     <Folder Include="Utils\Filters\" />
+    <Folder Include="Models\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Utils\Extensions\" />
+    <Folder Include="Utils\Constants\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />

@@ -1,11 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using DotNetWebApp.Utils.Filters;
 
 namespace DotNetWebApp.Requests.Todo;
 
 public class IndexRequest : IValidatableObject
 {
-    [Required(ErrorMessage = "Nameは必須です")]
+    [Display(Name = "なまえ")]
+    [Required(ErrorMessage = "{0}は必須です")]
+    [StringLength(10)]
     public string? Name { get; set; }
+
+    [DisplayName("めた")]
+    [CustomRequired]
+    [MetaValidation]
+    public int? Meta { get; set; }
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {

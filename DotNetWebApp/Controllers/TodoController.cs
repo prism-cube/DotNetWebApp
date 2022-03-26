@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using DotNetWebApp.Requests.Todo;
 using DotNetWebApp.ViewModels.Todo;
 using DotNetWebApp.Utils.Filters;
+using System.Collections.ObjectModel;
 
 namespace DotNetWebApp.Controllers;
 
 [AutoValidateAntiforgeryToken]
+[Route("todo")]
 public class TodoController : Controller
 {
     private readonly ILogger<TodoController> _logger;
@@ -19,13 +21,14 @@ public class TodoController : Controller
         _logger = logger;
     }
 
+    [HttpGet("")]
     [ImportModelState]
     public IActionResult Index()
     {
         return View();
     }
 
-    [HttpPost]
+    [HttpPost("")]
     [ExportModelState]
     public IActionResult Index(IndexRequest request)
     {

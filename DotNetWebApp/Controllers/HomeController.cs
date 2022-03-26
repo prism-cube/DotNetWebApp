@@ -4,6 +4,7 @@ using DotNetWebApp.ViewModels;
 
 namespace DotNetWebApp.Controllers;
 
+[Route("")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -13,11 +14,13 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [HttpGet("")]
     public IActionResult Index()
     {
         return View();
     }
 
+    [HttpGet("privacy")]
     public IActionResult Privacy()
     {
         return View();
