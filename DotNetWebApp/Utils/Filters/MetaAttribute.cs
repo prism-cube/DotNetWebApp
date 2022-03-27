@@ -3,11 +3,11 @@ using DotNetWebApp.Utils.Constants;
 
 namespace DotNetWebApp.Utils.Filters;
 
-public class MetaValidationAttribute : ValidationAttribute
+public class MetaAttribute : ValidationAttribute
 {
     public bool IsMultiple { get; set; }
 
-    public MetaValidationAttribute()
+    public MetaAttribute()
     {
         IsMultiple = false;
         ErrorMessage = "{0}は不正な値です";

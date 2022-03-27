@@ -1,11 +1,9 @@
-﻿using System.Collections.ObjectModel;
+﻿namespace DotNetWebApp.ViewModels.Todo;
 
-namespace DotNetWebApp.ViewModels.Todo;
-
-public class DetailViewModel
+public record DetailViewModel
 {
-    public int DetailID { get; set; }
+    public int DetailID { get; init; }
 
-    public string? DetailParam { get; set; }
+    public string? DetailParam { get; init; }
 }
 

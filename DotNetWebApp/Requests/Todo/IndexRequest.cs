@@ -13,8 +13,13 @@ public class IndexRequest : IValidatableObject
 
     [DisplayName("めた")]
     [CustomRequired]
-    [MetaValidation]
+    [Meta]
     public int? Meta { get; set; }
+
+    [DisplayName("すうじ")]
+    [CustomRequired]
+    [Int]
+    public string? Number { get; set; }
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {

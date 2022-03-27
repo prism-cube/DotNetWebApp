@@ -40,6 +40,8 @@ public class TodoController : Controller
         var viewModel = new IndexViewModel()
         {
             Name = request.Name,
+            Meta = request.Meta,
+            Number = Convert.ToInt32(request.Number),
         };
         return View(viewModel);
     }
@@ -52,6 +54,7 @@ public class TodoController : Controller
             DetailID = detailID,
             DetailParam = request.DetailParam,
         };
+
         return View(viewModel);
     }
 }
