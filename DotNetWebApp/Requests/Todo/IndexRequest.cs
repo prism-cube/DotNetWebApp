@@ -19,7 +19,13 @@ public class IndexRequest : IValidatableObject
     [DisplayName("すうじ")]
     [CustomRequired]
     [Int]
+    [Range(0, 99)]
     public string? Number { get; set; }
+
+    [Display(Name = "げんざいにちじ")]
+    [CustomRequired]
+    [Range(typeof(DateTime), "1997/07/17", "2022/12/31 23:59:59")]
+    public DateTime? DateTimeNow { get; set; }
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {

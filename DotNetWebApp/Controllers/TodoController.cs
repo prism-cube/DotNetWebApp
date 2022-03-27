@@ -25,7 +25,11 @@ public class TodoController : Controller
     [ImportModelState]
     public IActionResult Index()
     {
-        return View();
+        var viewModel = new IndexViewModel()
+        {
+            DateTimeNow = DateTime.Now,
+        };
+        return View(viewModel);
     }
 
     [HttpPost("")]
@@ -42,6 +46,7 @@ public class TodoController : Controller
             Name = request.Name,
             Meta = request.Meta,
             Number = Convert.ToInt32(request.Number),
+            DateTimeNow = request.DateTimeNow,
         };
         return View(viewModel);
     }

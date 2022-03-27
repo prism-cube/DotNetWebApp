@@ -32,6 +32,13 @@
                 <span asp-validation-for="Number" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="DateTimeNow" class="control-label"></label>
+                <input asp-for="DateTimeNow" type="text" class="form-control input-lg">
+                <span asp-validation-for="DateTimeNow" class="text-danger"></span>
+            </div>
+            <!-- TODO: ラジオ -->
+            <!-- TODO: チェックボックス -->
+            <div class="form-group">
                 <button type="submit" class="btn btn-success btn-block btn-lg">追加</button>
             </div>
         </form>
