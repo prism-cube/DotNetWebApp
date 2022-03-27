@@ -2,10 +2,10 @@
 
 namespace DotNetWebApp.ViewModels.Todo;
 
-public class IndexViewModel
+public class DetailViewModel
 {
-    public string? Name { get; set; }
+    public int DetailID { get; set; }
 
-    public string? Meta { get; set; }
+    public string? DetailParam { get; set; }
 }
 

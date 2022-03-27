@@ -43,4 +43,15 @@ public class TodoController : Controller
         };
         return View(viewModel);
     }
+
+    [HttpGet("detail/{detailID:int}")]
+    public IActionResult Detail(DetailRequest request, int detailID)
+    {
+        var viewModel = new DetailViewModel()
+        {
+            DetailID = detailID,
+            DetailParam = request.DetailParam,
+        };
+        return View(viewModel);
+    }
 }
