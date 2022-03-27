@@ -20,6 +20,8 @@
     <None Remove="Entities\" />
     <None Remove="Utils\Extensions\" />
     <None Remove="Utils\Constants\" />
+    <None Remove="Services\" />
+    <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Todo\" />
@@ -33,6 +35,8 @@
     <Folder Include="Entities\" />
     <Folder Include="Utils\Extensions\" />
     <Folder Include="Utils\Constants\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
