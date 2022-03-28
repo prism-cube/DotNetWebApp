@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using DotNetWebApp.Requests.Todo;
+using DotNetWebApp.Services;
 using DotNetWebApp.ViewModels.Todo;
 using DotNetWebApp.Utils.Filters;
-using System.Collections.ObjectModel;
 
 namespace DotNetWebApp.Controllers;
 
@@ -15,10 +15,12 @@ namespace DotNetWebApp.Controllers;
 public class TodoController : Controller
 {
     private readonly ILogger<TodoController> _logger;
+    private readonly TodoService _service;
 
-    public TodoController(ILogger<TodoController> logger)
+    public TodoController(ILogger<TodoController> logger, TodoService service)
     {
         _logger = logger;
+        _service = service;
     }
 
     [HttpGet("")]
@@ -40,6 +42,8 @@ public class TodoController : Controller
         {
             return RedirectToAction(nameof(Index));
         }
+
+        var message = _service.GetMessage();
 
         var viewModel = new IndexViewModel()
         {
