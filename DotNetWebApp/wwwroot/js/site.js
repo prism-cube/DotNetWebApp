@@ -3,3 +3,12 @@
 
 // Write your JavaScript code.
 
+$(function () {
+    $('.toast').toast({ animation: true, autohide: true, delay: 3000 });
+
+    $(".toast").toast("show");
+
+    $("#showToastBtn").on("click", function () {
+        $(".toast").toast("show");
+    });
+});

@@ -46,7 +46,22 @@
 
         <p><a asp-controller="Todo" asp-action="Detail" asp-route-detailID="123" asp-route-detailParam="query">/todo/detail/123?detailParam=query</a></p>
 
-        @await Component.InvokeAsync(typeof(SampleViewComponent), new SampleViewComponentParam { Text = "ViewComponent!" }) 
+        <button type="button" class="btn btn-primary" id="showToastBtn">
+            Show toast
+        </button>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+            <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex alert-success">
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        @await Component.InvokeAsync(typeof(SampleViewComponent), new SampleViewComponentParam { Text = "ViewComponent!" })
     </div>
 </div>
 
