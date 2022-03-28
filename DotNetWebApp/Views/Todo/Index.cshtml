@@ -48,7 +48,25 @@
             <a asp-controller="Todo" asp-action="Detail" asp-route-detailID="123" asp-route-detailParam="query">/todo/detail/123?detailParam=query</a>
         </p>
 
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+            Launch demo modal
+        </button>
+
         @await Component.InvokeAsync(typeof(SampleViewComponent), new SampleViewComponentParam { Text = "ViewComponent!" })
     </div>
 </div>
+
+@section Modal {
+    <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        これはモーダルです
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+}
 
