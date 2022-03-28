@@ -1,4 +1,5 @@
-﻿@model DotNetWebApp.ViewModels.Todo.DetailViewModel
+﻿@using DotNetWebApp.ViewComponents.Sample
+@model DotNetWebApp.ViewModels.Todo.DetailViewModel
 @{
     ViewData["Title"] = "Todo Detail Page";
 }
@@ -10,5 +11,7 @@
         <p>DetailID: @Model.DetailID</p>
         <p>DetailParam: @Model.DetailParam</p>
     </div>
+
+    @await Component.InvokeAsync(typeof(SampleViewComponent), new SampleViewComponentParam { Text = "ViewComponent!!" })
 </div>
 

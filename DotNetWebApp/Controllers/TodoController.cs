@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using DotNetWebApp.Requests.Todo;
 using DotNetWebApp.Services;
 using DotNetWebApp.ViewModels.Todo;
+using DotNetWebApp.Utils.Constants;
 using DotNetWebApp.Utils.Filters;
 
 namespace DotNetWebApp.Controllers;
@@ -40,19 +41,22 @@ public class TodoController : Controller
     {
         if (!ModelState.IsValid)
         {
+            TempData[TempDataKey.ToastError] = "入力エラーがあります";
             return RedirectToAction(nameof(Index));
         }
 
         var message = _service.GetMessage();
 
-        var viewModel = new IndexViewModel()
+        /*var viewModel = new IndexViewModel()
         {
             Name = request.Name,
             Meta = request.Meta,
             Number = Convert.ToInt32(request.Number),
             DateTimeNow = request.DateTimeNow,
-        };
-        return View(viewModel);
+        };*/
+
+        TempData[TempDataKey.ToastSuccess] = message;
+        return RedirectToAction(nameof(Index));
     }
 
     [HttpGet("detail/{detailID:int}")]
