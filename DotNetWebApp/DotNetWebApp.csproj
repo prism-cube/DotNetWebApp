@@ -22,6 +22,10 @@
     <None Remove="Utils\Constants\" />
     <None Remove="Services\" />
     <None Remove="Repositories\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="ViewComponents\Sample\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\Sample\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Todo\" />
@@ -37,6 +41,10 @@
     <Folder Include="Utils\Constants\" />
     <Folder Include="Services\" />
     <Folder Include="Repositories\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="ViewComponents\Sample\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Sample\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
