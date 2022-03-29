@@ -28,6 +28,8 @@ public class TodoController : Controller
     [ImportModelState]
     public IActionResult Index()
     {
+        var todoList = _service.SelectAll();
+
         var viewModel = new IndexViewModel()
         {
             DateTimeNow = DateTime.Now,

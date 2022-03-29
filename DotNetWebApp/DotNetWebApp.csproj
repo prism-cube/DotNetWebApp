@@ -26,6 +26,9 @@
     <None Remove="ViewComponents\Sample\" />
     <None Remove="Views\Shared\Components\" />
     <None Remove="Views\Shared\Components\Sample\" />
+    <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
+    <None Remove="Data\" />
+    <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Todo\" />
@@ -45,8 +48,10 @@
     <Folder Include="ViewComponents\Sample\" />
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="Views\Shared\Components\Sample\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.3" />
   </ItemGroup>
 </Project>
