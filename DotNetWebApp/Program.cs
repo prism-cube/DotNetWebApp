@@ -12,7 +12,7 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseInMemoryDat
 
 builder.Services.AddScoped<TodoService>();
 
-builder.Services.AddScoped<TodoRepository>();
+builder.Services.AddScoped<ITodoRepository, TodoRepository>();
 
 var app = builder.Build();
 

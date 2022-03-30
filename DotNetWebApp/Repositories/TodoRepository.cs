@@ -5,7 +5,7 @@ using DotNetWebApp.Models;
 
 namespace DotNetWebApp.Repositories;
 
-public class TodoRepository
+public class TodoRepository : ITodoRepository
 {
 	private readonly DatabaseContext _db;
 

@@ -6,9 +6,9 @@ namespace DotNetWebApp.Services;
 
 public class TodoService
 {
-	private readonly TodoRepository _repository;
+	private readonly ITodoRepository _repository;
 
-	public TodoService(TodoRepository repository)
+	public TodoService(ITodoRepository repository)
 	{
 		_repository = repository;
 	}
